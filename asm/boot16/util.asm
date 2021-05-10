@@ -1,3 +1,4 @@
+[bits 16]
 BOOTLOADER_PRINT:
     push ax
     push bx

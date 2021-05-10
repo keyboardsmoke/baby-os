@@ -1,4 +1,6 @@
 [bits 64]
+
+global BOOTLOADER_EP64
 BOOTLOADER_EP64:
     ; mov edi, 0xb8000
     ; mov rax, 0x1f201f201f201f20
@@ -8,9 +10,9 @@ BOOTLOADER_EP64:
     ; TODO: Even though '_start' is identical to StartEmu
     ; (I checked with IDA)
     ; it is faulting when trying to call it... linking issue? No idea.
-    ; call _start
+    call _start
 
-    call StartEmu
+    ; call StartEmu
 
     jmp $
 

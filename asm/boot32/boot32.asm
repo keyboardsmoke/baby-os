@@ -1,5 +1,13 @@
 [bits 32]
 
+[extern BOOTLOADER_EP64]
+
+extern codeseg
+extern dataseg
+
+%include "boot32/util.asm"
+
+global BOOTLOADER_EP32
 BOOTLOADER_EP32:
     mov ax, dataseg
     mov ds, ax
@@ -60,6 +68,3 @@ CPUIDErrorString:
 
 LongModeErrorString:
     db 'Long mode not supported. ',0
-
-%include "boot32/util.asm"
-%include "boot64/boot64.asm"

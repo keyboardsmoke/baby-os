@@ -2,7 +2,7 @@
 POSTBOOT_AREA equ 0x7e00
 
 ; This is the number of sectors the bootloader will be able to access after the bootloader reserved space
-LOAD_SECTORS equ 4
+LOAD_SECTORS equ 8
 
 BOOTLOADER_READ_SECTORS:
     ; [INT 13h AH=02h: Read Sectors From Drive]
